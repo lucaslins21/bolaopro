@@ -36,3 +36,10 @@ Rafael
 3-1/1-2/2-1/1-2/2-1
 Gustavo
 3-2/0-1/3-0/2-2/1-1
+
+
+#O que o programa faz??
+
+O programa solicitará ao usuário algumas informações: número de jogos, número de jogadores que palpitaram, palpites corretos e cartela. Os 3 primeiros já são auto-explicativos, já no último pedido basta vc copiar e colar do nome do primeiro participante aos palpites do último, no exemplo acima seria do "Amadeu" para baixo.
+
+O programa retornará o nome do jogador seguido da quantidade de gols que ele fez.
