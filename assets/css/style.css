@@ -11,6 +11,7 @@ body {
     overflow: hidden;
 }
 
+
 .container {
     width: 450px;
     background: #1e1e1e;
@@ -35,7 +36,7 @@ header .logo {
 header h1 {
     margin: 0;
     font-size: 1.8em;
-    color: #e53935;
+    color: #a30d0a;
 }
 
 main {
@@ -94,7 +95,7 @@ button {
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: #e53935;
+    background-color: #a30d0a;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -104,7 +105,7 @@ button {
 }
 
 button:hover {
-    background-color: #d32f2f;
+    background-color: #bd1816;
 }
 
 footer {
@@ -117,6 +118,25 @@ footer {
 footer p {
     margin: 0;
 }
+
+.resultado {
+    text-align: center;
+}
+
+#ranking {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+}
+
+textarea::placeholder {
+    white-space: pre-wrap; /*permite simular múltiplas linhas no placeholder*/
+    line-height: 1.5; /*ajusta o espaçamento entre as linhas do placeholder*/
+}
+
+
 
 
 
