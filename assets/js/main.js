@@ -98,7 +98,7 @@ function calcularRanking(resultados, palpites) {
 }
 
 document.getElementById('calcular').addEventListener('click', function () {
-    // Exibir o botão de copiar após o ranking ser calculado
+    //exibir o botão de copiar após o ranking ser calculado
     const botaoCopiar = document.getElementById('botao-copiar');
     const rankingText = document.getElementById('ranking').textContent;
 
@@ -110,7 +110,7 @@ document.getElementById('calcular').addEventListener('click', function () {
 });
 
 document.getElementById('botao-copiar').addEventListener('click', function () {
-    const rankingText = document.getElementById('ranking').innerText; // Alterado para innerText
+    const rankingText = document.getElementById('ranking').innerText;
 
     if (rankingText.trim() !== "") {
         navigator.clipboard.writeText(rankingText).then(() => {

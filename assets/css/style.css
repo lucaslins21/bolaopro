@@ -141,14 +141,14 @@ footer p {
 
 #resultado {
     width: 90%;
-    max-width: 360px; /* Garante que fique alinhado com a caixa superior */
-    margin: 20px auto; /* Centraliza no meio */
-    background-color: #242424; /* Cor de fundo semelhante à outra caixa */
+    max-width: 360px;
+    margin: 20px auto;
+    background-color: #242424;
     padding: 20px;
     border-radius: 16px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     text-align: center;
-    box-sizing: border-box; /* Inclui padding no tamanho total */
+    box-sizing: border-box; 
 }
 
 #ranking {
@@ -161,7 +161,7 @@ footer p {
 
 textarea::placeholder {
     white-space: pre-wrap; /*permite simular múltiplas linhas no placeholder*/
-    line-height: 1.5; /*ajusta o espaçamento entre as linhas do placeholder*/
+    line-height: 1.5;
 }
 
 @keyframes fadeIn {
