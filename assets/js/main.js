@@ -97,3 +97,43 @@ function calcularRanking(resultados, palpites) {
     return acertosArray;
 }
 
+document.getElementById('calcular').addEventListener('click', function () {
+    // Exibir o botão de copiar após o ranking ser calculado
+    const botaoCopiar = document.getElementById('botao-copiar');
+    const rankingText = document.getElementById('ranking').textContent;
+
+    if (rankingText.trim() !== "") {
+        botaoCopiar.style.display = 'flex';
+    } else {
+        botaoCopiar.style.display = 'none';
+    }
+});
+
+document.getElementById('botao-copiar').addEventListener('click', function () {
+    const rankingText = document.getElementById('ranking').innerText; // Alterado para innerText
+
+    if (rankingText.trim() !== "") {
+        navigator.clipboard.writeText(rankingText).then(() => {
+            const mensagemCopiado = document.createElement('span');
+            mensagemCopiado.textContent = 'Ranking copiado!';
+            mensagemCopiado.style.color = '#fff';
+            mensagemCopiado.style.fontSize = '14px';
+            mensagemCopiado.style.marginLeft = '10px';
+            mensagemCopiado.style.animation = 'fadeOut 2s forwards';
+
+            const botaoCopiar = document.getElementById('botao-copiar');
+            botaoCopiar.parentNode.insertBefore(mensagemCopiado, botaoCopiar.nextSibling);
+
+            setTimeout(() => {
+                mensagemCopiado.remove();
+            }, 2000);
+        }).catch(err => {
+            console.error('Erro ao copiar o ranking: ', err);
+        });
+    }
+});
+
+
+
+
+
