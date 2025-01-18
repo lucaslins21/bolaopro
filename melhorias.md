@@ -1,2 +1,0 @@
--> Corrigir erro de não printar o resultado do último jogador
--> Melhorar o menu
