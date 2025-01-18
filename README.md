@@ -75,18 +75,22 @@
 
 ### Entradas:
 - **Resultados dos Jogos**: `2-1/1X0/0x0/3-2`
-- **Palpites**: 
-🇧🇷 Lins 
-2-1/1-0/0-0/3-2 
-🇺🇾 Rafael 
-1-1/0-0/2-2/1-3
+- **Palpites**:
+  ```
+  🇧🇷 Lins 
+  2-1/1-0/0-0/3-2 
+  🇺🇾 Rafael 
+  1-1/0-0/2-2/1-3
+  ```
 
 
 ### Saída:
-- Ranking 
+```
+Ranking
+ 
 🇧🇷 Lins (4) 
 🇺🇾 Rafael (2)
-
+```
 
 ---
 
