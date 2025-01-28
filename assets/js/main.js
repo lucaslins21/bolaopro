@@ -36,7 +36,7 @@ function verificarPalpitesComQuantidade(palpites, numResultados) {
     const palpitesNormalizados = palpites.trim().replace(/\s*\n\s*/g, '\n');
 
     //divide a entrada em linhas
-    const linhas = palpitesNormalizados.split('\n').filter(linha => linha.trim() !== ''); // Remove linhas vazias
+    const linhas = palpitesNormalizados.split('\n').filter(linha => linha.trim() !== ''); //remove linhas vazias
 
     for (let i = 0; i < linhas.length; i += 2) {
         //verifica se a linha do nome da pessoa existe
@@ -65,14 +65,18 @@ function verificarResultados(resultados) {
     return regex.test(resultadosSemEspacos);
 }
 
+function padronizarSeparadores(string) {
+    return string.replace(/[-xX]/g, '-'); //substitui todos os separadores por '-'
+}
+
 function calcularRanking(resultados, palpites) {
-    const resultadosArray = resultados.split('/');
-    const palpitesArray = palpites.trim().split('\n').filter(linha => linha.trim() !== ''); // Remove linhas vazias
+    const resultadosArray = resultados.split('/').map(padronizarSeparadores);
+    const palpitesArray = palpites.trim().split('\n').filter(linha => linha.trim() !== ''); //remove linhas vazias
     const acertos = {};
 
     for (let i = 0; i < palpitesArray.length; i += 2) {
         const nome = palpitesArray[i].trim();
-        const palpite = palpitesArray[i + 1].trim().split('/');
+        const palpite = palpitesArray[i + 1].trim().split('/').map(padronizarSeparadores);
 
         let acertosCount = 0;
 
